@@ -17,10 +17,10 @@ class TestQuickSort(unittest.TestCase):
         expected = [0, 0, 0, 0, 0, 0]
         x = main.Array([0, 0, 0, 0, 0, 0]).QuickSort(0, len([0, 0, 0, 0, 0, 0]) - 1)
         self.assertEqual(expected, x)
-    def test_4(self):
+    def test_5(self):
         expected = [0.25, 1/3, 2, 2.33, 10.566, 45.0]
         x = main.Array([0.25, 10.566, 2.33, 1/3, 45.0, 2]).QuickSort(0, len([0.25, 10.566, 2.33, 1/3, 45.0, 2]) - 1)
         self.assertEqual(expected, x)
-    def test_5(self):
+    def test_6(self):
         with self.assertRaises(TypeError):
             x = main.Array([0.25, 10.566, "2.33", 1/3, 45.0, 2]).QuickSort(0, len([0.25, 10.566, "2.33", 1/3, 45.0, 2]) - 1)
