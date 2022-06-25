@@ -1,10 +1,6 @@
 class Array:
     def __init__(self, a = []):
         self.array = a
-    def Append(self, v = None):
-        return self.array.append(v)
-    def Print(self):
-        print(self.array)
     def QuickSort(self, left = 0, right = 0, c=0):
         if self.array == []:
             return self.array
