@@ -1,7 +1,12 @@
 class Array:
     def __init__(self, a = []):
         self.array = a
-    def QuickSort(self, left = 0, right = 0, c=0):
+    def QuickSort(self):
+        left = 0
+        right = len(self.array) - 1
+        c = 0
+        return self._QuickSort(left, right, c)
+    def _QuickSort(self, left, right, c):
         if self.array == []:
             return self.array
         else:
@@ -24,7 +29,7 @@ class Array:
                     i += 1
                     j -= 1
             if left < j:
-                self.QuickSort(left, j, c)
+                self._QuickSort(left, j, c)
             if i < right:
-                self.QuickSort(i, right, c)
+                self._QuickSort(i, right, c)
             return self.array
